@@ -1,8 +1,13 @@
 import './css/style.css';
 import Footer from './components/Footer.js';
-import {Logo,Menu} from './components/Header.js';
+import Panel from './components/Panel.js';
+import { Logo, Menu } from './components/Header.js';
 
+// import img1 from './img/.Blizzards.jpg';
+
+const arr = ['Blizzards', 'Calm', 'Dusty_Road', 'Escape', 'Payday', 'Retreat', 'Seasonal', 'Vespers']
 const name1 = "DAVID";
+const path = process.env.PUBLIC_URL;
 
 function App() {
 	return (
@@ -13,48 +18,13 @@ function App() {
 				<Menu />
 
 				<section>
-					<article>
-						<div className="inner">
-							{name1}
-						</div>
-					</article>
-					<article>
-						<div className="inner">
-							ANDY
-						</div>
-					</article>
-					<article>
-						<div className="inner">
-							MICHAEL
-						</div>
-					</article>
-					<article>
-						<div className="inner">
-							JULIA
-						</div>
-					</article>
-					<article>
-						<div className="inner">
-							CHRISTOPER
-						</div>
-					</article>
-					<article>
-						<div className="inner">
-							EMMA
-						</div>
-					</article>
-					<article>
-						<div className="inner">
-							PAUL
-						</div>
-					</article>
-					<article>
-						<div className="inner">
-							CATHERINE
-						</div>
-					</article>
+					{
+						arr.map((data,index) => {
+							return <Panel key={index} path={path} data={data} />
+						})
+					}
 				</section>
-				
+
 				<Footer />
 			</figure>
 
