@@ -5,9 +5,7 @@ import { Logo, Menu } from './components/Header.js';
 
 // import img1 from './img/.Blizzards.jpg';
 
-const arr = ['Blizzards', 'Calm', 'Dusty_Road', 'Escape', 'Payday', 'Retreat', 'Seasonal', 'Vespers']
-const name1 = "DAVID";
-const path = process.env.PUBLIC_URL;
+
 
 function App() {
 	return (
@@ -18,11 +16,7 @@ function App() {
 				<Menu />
 
 				<section>
-					{
-						arr.map((data,index) => {
-							return <Panel key={index} path={path} data={data} />
-						})
-					}
+					<Panel />
 				</section>
 
 				<Footer />
